@@ -35,6 +35,8 @@ print(len(data))
 
 # YOUR CODE HERE 2
 selection=data.loc[(data.index>='19880101')&(data.index<='20181231')]
+#selection is data from 19880101 to 20181231
+
 # Check that the data was read in correctly:
 selection.head()
 
@@ -55,12 +57,22 @@ print("Number of rows:", len(selection))
 
 # YOUR CODE HERE 3
 import matplotlib.pyplot as plt
-a=selection['TEMP_C']
+a=selection['TEMP_C']#a is data of 'TEMP_C' between selection
 plot=a.plot(linestyle="solid",color="black",marker="o",figsize=(14,6),markersize=3)
+#linestyle is solid
+#color is black
+#marker is round
+#figsize is figure size
+
 plot.set_title('Helsinki-Vantaa Airport')
 plot.set_xlabel('Time')
 plot.set_ylabel('Tempature(Celsius)')
 plot.grid()
+#tiele is 'Helsinki-Vantaa Airport'
+#x_label is 'Time'
+#y_label is 'Tempature(Celsius)'
+#add grid line
+
 # Set output file name
 outputfp = "temp_line_plot.png"
 

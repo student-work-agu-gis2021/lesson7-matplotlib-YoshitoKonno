@@ -61,11 +61,15 @@ assert len(colors) == 1000, "There should be 1000 random numbers for colors"
 import matplotlib.pyplot as plt
 plt.scatter(data['x'],data['y'],s=50,c=colors,cmap='rainbow',edgecolor='black')
 #'s' is size of point
-#
+#'c' is random colors
+#'cmap' is colormap
+#'edgecolor' is add a outline for the points
 
 # Add labels and title
 # YOUR CODE HERE 4
-
+#title is "My random candy points"
+#xlabel's name is x-label
+#ylabel's name is y-label
 plt.title("My random candy points")
 plt.xlabel("x-label")
 plt.ylabel("y-label")
